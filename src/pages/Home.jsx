@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import img1 from '../assets/pexels-jang-_s-_-699953-removebg-preview.png'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
    
@@ -15,7 +16,10 @@ const Home = () => {
             </div>
         </div>
         <p className='text-center text-[3rem] text-blue-300'>Find your Favourite food spots</p>
-        <button type="button" class="text-white float-end bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Explore Restraurants</button>
+      <Link to={'/resdetails'}  >
+
+      <button type="button" class="text-white float-end bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Explore Restraurants</button>
+      </Link>
     </div>
   )
 }
