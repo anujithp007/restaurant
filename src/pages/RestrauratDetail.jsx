@@ -40,14 +40,16 @@ const RestrauratDetail = () => {
     <div className='flex flex-wrap gap-4 justify-center'>
         {data.map((item) => (
   <div key={item.id}>
-    <ResCards
+   <Link to={`/details/${item.id}`}>
+   <ResCards
       key={item.id}
       image={item.photograph || img1}
       name={item.name}
       type={item.cuisine_type}
       place={item.neighborhood}
       hours={item.address}
-    />
+      />
+      </Link> 
     {isItemInCart(item.id) ? (
       <button
         onClick={() => handleRemoveCart(item.id)} // Pass item.id to handleRemoveCart
